@@ -43,6 +43,33 @@
                 console.log(`Hi! I'm ${this.name[0]} ${this.name[1]}.`);
             },
         };
+
+        let bandInfo;
+        
+        const band = {
+            name: "Incubus",
+            nationality: "American",
+            genre: "Rock",
+            members: "5",
+            formed: "1991",
+            split: false,
+            albums: {
+                firstAlbum: "S.C.I.E.N.C.E.", 
+                firstRelease: "1997",
+                secondAlbum: "Fungus Amongus", 
+                secondRelease: "1995", 
+                thirdAlbum: "Make Yourself", 
+                thirdRelease: "1999",
+            },
+            bandInfo() {
+                console.log(`My favorite band is ${this.name}. They are an ${band.nationality} ${band.genre} band, that have been performing for ${2023 - band.formed} years. 
+                Their first album was ${band.albums.firstAlbum}, which was released in ${band.albums.firstRelease}.`)
+            },
+        };
+
+      
+        
+
     </script>
   </body>
 
