@@ -1,3 +1,5 @@
+
+
 html,
 body {
   margin: 0;
@@ -36,7 +38,7 @@ body {
 .title-wrapper {
   width: 100vw;
   height: 8em;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: 'Alfa Slab One', cursive;
   background: #e0eafc; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to left,
@@ -50,7 +52,7 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-size: 1.4rem;
   padding: 3em;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.4rem;
 }
 
 .button-container {
@@ -63,8 +65,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Alfa Slab One', cursive;
   font-size: 1.6rem;
+  letter-spacing: 0.2rem;
   width: 10rem;
   height: 4rem;
   font-weight: 700;
@@ -89,4 +92,84 @@ body {
     #cfdef3,
     #e0eafc
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#book-form {
+  border: 1px solid red;
+  padding: 1em 3em;
+  border-radius: 10px;
+  background-color: #e0eafc; /* fallback for old browsers */
+  background-color: -webkit-linear-gradient(
+    to left,
+    #cfdef3,
+    #e0eafc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background-color: linear-gradient(
+    to left,
+    #cfdef3,
+    #e0eafc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#add-book-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#book-form h2 {
+  font-family: 'Alfa Slab One', cursive;
+  margin: 1em;
+  text-align: center;
+}
+
+label {
+  width: max-content;
+  text-align: center;
+  font-family: 'Gentium Book Plus', serif;
+  font-size: 1rem;
+  margin-bottom: 0.4em;
+  align-items: flex-end;
+}
+
+.text-input {
+  width: 16rem;
+  height: 3rem;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+#add-book-form button {
+  width: 16rem;
+  height: 3rem;
+  background-color: lightgreen;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+::placeholder {
+  font-family: 'Gentium Book Plus', serif;
+  font-size: 1rem;
+}
+
+.read-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  gap: 1em;
+  margin-bottom: 0.5em;
+}
+
+.read-container label {
+  font-size: 1.4rem;
+}
+
+.read-container input {
+  width: 2em;
+  height: 2em;
 }
