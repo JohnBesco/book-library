@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
     <title>Object-oriented JavaScript example</title>
   </head>
 
   <body>
-    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
-    
-    <script src="app.js" defer>
-    </script>
-  </body>
+    <div class="container">
+      <div class="title-wrapper">
+        <h1>My Library</h1>
+      </div>
 
+      <button id="new-book-btn"> + Book</button>
+
+      <div id="book-list"></div>
+
+      <div id="book-form" style="display: none">
+        <h2>Add a New Book</h2>
+
+        <form id="add-book-form">
+          <label for="title">Title:</label>
+          <input type="text" id="title" required /><br />
+
+          <label for="author">Author:</label>
+          <input type="text" id="author" required /><br />
+
+          <label for="pages">Number of Pages:</label>
+          <input type="number" id="pages" required /><br />
+
+          <label for="read">Read:</label>
+          <input type="checkbox" id="read" /><br />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
 </html>
