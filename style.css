@@ -1,8 +1,22 @@
 html,
 body {
-  overflow: hidden;
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+body {
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 * {
@@ -10,4 +24,48 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title-wrapper {
+  width: 100vw;
+  height: 8em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background: #e0eafc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #cfdef3,
+    #e0eafc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #cfdef3,
+    #e0eafc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 1.4rem;
+  padding: 3em;
+  letter-spacing: 0.2rem;
+}
+
+.button-container {
+  margin: 2em auto;
+  border: 1px solid red;
+  width: min-content;
+  height: min-content;
+}
+
+.button-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6rem;
+  width: 10rem;
+  height: 4.4rem;
 }
