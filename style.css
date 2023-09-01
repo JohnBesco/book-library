@@ -55,7 +55,6 @@ body {
 
 .button-container {
   margin: 2em auto;
-  border: 1px solid red;
   width: min-content;
   height: min-content;
 }
@@ -67,5 +66,27 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.6rem;
   width: 10rem;
-  height: 4.4rem;
+  height: 4rem;
+  font-weight: 700;
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  color: black;
+  background-color: #e0eafc; /* fallback for old browsers */
+  background-color: -webkit-linear-gradient(
+    to left,
+    #cfdef3,
+    #e0eafc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background-color: linear-gradient(
+    to left,
+    #cfdef3,
+    #e0eafc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
