@@ -211,6 +211,14 @@ label {
   border-radius: 5px;
 }
 
+.read-button {
+  background-color: lightgreen;
+}
+
+.not-read-button {
+  background-color: lightcoral;
+}
+
 #book-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

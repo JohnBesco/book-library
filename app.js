@@ -22,7 +22,7 @@ function displayBooks() {
       <h3>"${book.title}"</h3>
       <p>${book.author}</p>
       <p>${book.pages} Pages</p>
-      <button class="${book.read ? "read-button" : "not-read-button"}">${
+      <button class="${book.read ? "read-button" : "not-read-button"}" data-index="${index}">${
       book.read ? "Read" : "Not Read Yet"
     }</button>
       <button onclick="removeBook(${index})">Remove</button>
@@ -30,6 +30,18 @@ function displayBooks() {
     bookList.appendChild(bookCard);
   });
 }
+
+document.addEventListener("click", (event) => {
+  if (event.target.matches(".read-button, .not-read-button")) {
+    const button = event.target;
+    const index = button.dataset.index;
+    myLibrary[index].read = !myLibrary[index].read;
+
+    button.classList.toggle("read-button");
+    button.classList.toggle("not-read-button");
+    button.textContent = myLibrary[index].read ? "Read" : "Not Read Yet";
+  }
+});
 
 function removeBook(index) {
   myLibrary.splice(index, 1);
@@ -65,3 +77,5 @@ document.getElementById("new-book-btn").addEventListener("click", () => {
 });
 
 displayBooks();
+
+
