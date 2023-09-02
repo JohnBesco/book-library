@@ -19,10 +19,10 @@ function displayBooks() {
     const bookCard = document.createElement("div");
     bookCard.classList.add("book-card");
     bookCard.innerHTML = `
-      <h3>${book.title}</h3>
-      <p>Author: ${book.author}</p>
-      <p>Pages: ${book.pages}</p>
-      <p>Read: ${book.read ? "Yes" : "No"}</p>
+      <h3>"${book.title}"</h3>
+      <p>${book.author}</p>
+      <p>${book.pages} Pages</p>
+      <p>${book.read ? "Yes" : "No"}</p>
       <button onclick="removeBook(${index})">Remove</button>
     `;
     bookList.appendChild(bookCard);
