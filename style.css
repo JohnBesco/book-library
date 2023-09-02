@@ -234,8 +234,9 @@ label {
 #book-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 2em;
   margin: 2em;
-  gap: 3em;
+  padding: 0 2em;
 }
 
 #book-form {
