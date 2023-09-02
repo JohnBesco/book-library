@@ -34,10 +34,7 @@ function removeBook(index) {
   displayBooks();
 }
 
-document.getElementById("new-book-btn").addEventListener("click", () => {
-  const bookForm = document.getElementById("book-form");
-  bookForm.style.display = "block";
-});
+const bookForm = document.getElementById("book-form");
 
 document.getElementById("add-book-form").addEventListener("submit", (event) => {
   event.preventDefault(); // Prevent the form from submitting and refreshing the page
@@ -51,10 +48,14 @@ document.getElementById("add-book-form").addEventListener("submit", (event) => {
   addBookToLibrary(newBook);
 
   const bookForm = document.getElementById("book-form");
-  bookForm.style.display = "none"; //
-  displayBooks(); 
-  event.target.reset(); 
+  bookForm.close(); // Close the dialog/form
+  displayBooks();
+  event.target.reset();
 });
 
+document.getElementById("new-book-btn").addEventListener("click", () => {
+  const bookForm = document.getElementById("book-form");
+  bookForm.showModal();
+});
 
 displayBooks();
