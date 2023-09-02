@@ -201,14 +201,21 @@ label {
 
 .book-card h3 {
   font-family: "Alfa Slab One", cursive;
-  font: 1.2rem;
+  font-size: 1.4rem;
   letter-spacing: 0.1rem;
 }
 
 .book-card button {
+  font-family: "Gentium Book Plus", serif;
+  font-size: 1.2rem;
   width: 14rem;
   height: 3rem;
   border-radius: 5px;
+  border: none;
+}
+
+.book-card button:hover {
+  filter: brightness(0.95);
 }
 
 .read-button {
@@ -217,6 +224,10 @@ label {
 
 .not-read-button {
   background-color: lightcoral;
+}
+
+.book-card button:last-child {
+  background-color: lightgrey;
 }
 
 #book-list {
