@@ -1,10 +1,10 @@
 const myLibrary = [];
 
 function Book(title, author, pages, read) {
-  this.title = title,
-  this.author = author,
-  this.pages = pages,
-  this.read = read
+  (this.title = title),
+    (this.author = author),
+    (this.pages = pages),
+    (this.read = read);
 }
 
 function addBookToLibrary(book) {
@@ -22,7 +22,9 @@ function displayBooks() {
       <h3>"${book.title}"</h3>
       <p>${book.author}</p>
       <p>${book.pages} Pages</p>
-      <p>${book.read ? "Yes" : "No"}</p>
+      <button class="${book.read ? "read-button" : "not-read-button"}">${
+      book.read ? "Read" : "Not Read Yet"
+    }</button>
       <button onclick="removeBook(${index})">Remove</button>
     `;
     bookList.appendChild(bookCard);

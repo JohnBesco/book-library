@@ -177,12 +177,14 @@ label {
 
 .book-card {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  gap: 0.5em;
-  width: 20rem;
+  width: max-content;
   height: 20rem;
-  padding: 3em 3em;
+  font-family: "Gentium Book Plus", serif;
+  font-size: 1.2rem;
+  padding: 1.4em 3em;
   border-radius: 10px;
   background-color: #e0eafc; /* fallback for old browsers */
   background-color: -webkit-linear-gradient(
@@ -197,21 +199,23 @@ label {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.book-list {
-  display: flex;
-}
-
 .book-card h3 {
   font-family: "Alfa Slab One", cursive;
-  font: 1.4rem;
+  font: 1.2rem;
   letter-spacing: 0.1rem;
+}
+
+.book-card button {
+  width: 14rem;
+  height: 3rem;
+  border-radius: 5px;
 }
 
 #book-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin: 2em;
-  gap: 2em;
+  gap: 3em;
 }
 
 #book-form {
