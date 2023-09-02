@@ -96,7 +96,6 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
 #book-form {
   padding: 1em 3em;
   border-radius: 10px;
@@ -213,4 +212,10 @@ label {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin: 2em;
   gap: 2em;
+}
+
+#book-form {
+  position: relative;
+  margin: 0 auto;
+  top: 30%;
 }

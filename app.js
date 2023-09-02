@@ -47,14 +47,18 @@ document.getElementById("add-book-form").addEventListener("submit", (event) => {
   const newBook = new Book(title, author, pages, read);
   addBookToLibrary(newBook);
 
-  const bookForm = document.getElementById("book-form");
-  bookForm.close(); // Close the dialog/form
+  bookForm.close();
   displayBooks();
   event.target.reset();
 });
 
+document.addEventListener("click", (event) => {
+  if (event.target == bookForm) {
+    bookForm.close();
+  }
+});
+
 document.getElementById("new-book-btn").addEventListener("click", () => {
-  const bookForm = document.getElementById("book-form");
   bookForm.showModal();
 });
 

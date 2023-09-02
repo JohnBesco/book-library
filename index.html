@@ -20,9 +20,7 @@
   </head>
 
   <body>
-
     <div class="container">
-
       <div class="title-wrapper">
         <h1>Library</h1>
       </div>
@@ -32,47 +30,46 @@
       </div>
 
       <div class="books-container">
-        
         <div id="book-list"></div>
 
         <dialog id="book-form">
-            <h2>Add A New Book</h2>
-            <form id="add-book-form" method="dialog">
-              <input
-                type="text"
-                id="title"
-                class="text-input"
-                placeholder="Title"
-                required
-              /><br />
-  
-              <input
-                type="text"
-                id="author"
-                class="text-input"
-                placeholder="Author"
-                required
-              /><br />
-  
-              <input
-                type="number"
-                id="pages"
-                class="text-input"
-                placeholder="Number of Pages"
-                required
-              /><br />
-  
-              <div class="read-container">
-                <label for="read">Have you read it?</label>
-                <input type="checkbox" id="read" /><br />
-              </div>
-  
-              <button type="submit">Submit</button>
-            </form>
-        </dialog>
+          <h2>Add A New Book</h2>
+          <form id="add-book-form">
+            <input
+              name="title"
+              type="text"
+              id="title"
+              class="text-input"
+              placeholder="Title"
+              required
+            /><br />
 
-        
-        </div>
+            <input
+              name="author"
+              type="text"
+              id="author"
+              class="text-input"
+              placeholder="Author"
+              required
+            /><br />
+
+            <input
+              name="pages"
+              type="number"
+              id="pages"
+              class="text-input"
+              placeholder="Number of Pages"
+              required
+            /><br />
+
+            <div class="read-container">
+              <label for="read" >Have you read it?</label>
+              <input type="checkbox" id="read" name="read"/><br />
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+        </dialog>
       </div>
     </div>
 
