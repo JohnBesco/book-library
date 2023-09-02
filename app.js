@@ -1,10 +1,13 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-  (this.title = title),
-    (this.author = author),
-    (this.pages = pages),
-    (this.read = read);
+function Book(title, author, pages) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read,
+  this.toggleReadStatus = function () {
+    this.read = !this.read;
+  };
 }
 
 function addBookToLibrary(book) {
@@ -22,7 +25,7 @@ function displayBooks() {
       <h3>"${book.title}"</h3>
       <p>${book.author}</p>
       <p>${book.pages} Pages</p>
-      <button class="${book.read ? "read-button" : "not-read-button"}" data-index="${index}">${
+      <button class="${book.read ? "read-button" : "not-read-button"}" data-index="${index}" onclick="toggleReadStatus(${index})">${
       book.read ? "Read" : "Not Read Yet"
     }</button>
       <button onclick="removeBook(${index})">Remove</button>
@@ -31,17 +34,10 @@ function displayBooks() {
   });
 }
 
-document.addEventListener("click", (event) => {
-  if (event.target.matches(".read-button, .not-read-button")) {
-    const button = event.target;
-    const index = button.dataset.index;
-    myLibrary[index].read = !myLibrary[index].read;
-
-    button.classList.toggle("read-button");
-    button.classList.toggle("not-read-button");
-    button.textContent = myLibrary[index].read ? "Read" : "Not Read Yet";
-  }
-});
+function toggleReadStatus(index) {
+  myLibrary[index].toggleReadStatus();
+  displayBooks();
+}
 
 function removeBook(index) {
   myLibrary.splice(index, 1);
